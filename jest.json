@@ -3,9 +3,6 @@
   "transform": {
     "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
   },
-  "moduleNameMapper": {
-    "@app/(.*)": "<rootDir>/src/app/$1"
-  },
   "testRegex": "/src/.*\\.(test|spec).(ts|tsx|js)$",
   "collectCoverageFrom": [
     "src/**/*.ts",
