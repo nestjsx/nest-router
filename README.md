@@ -14,7 +14,7 @@ Every Module could have a path property that path will be a prefix for all Contr
 
 ## Install
 
-Waiting for My PR in Nestjs to be upproved, after that I will publish it in npm
+Waiting for My [PR](https://github.com/nestjs/nest/pull/389) in Nestjs to be upproved, after that I will publish it in npm
 
 ## Setup
 
