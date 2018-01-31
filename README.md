@@ -1,5 +1,120 @@
-# Nest Router
-🔀 Router Module For Nestjs Framework 🐯
+# Nest Router :vertical_traffic_light:
 
+Router Module For [Nestjs](https://github.com/nestjs/nest) Framework
 
-![UC](https://www.gannett-cdn.com/-mm-/438112d08852a5cf64fb668899b62a1c6abcfadb/c=0-104-5312-3105&r=x1683&c=3200x1680/local/-/media/2017/05/23/WIGroup/Appleton/636311326049773956-UC.jpg)
+## Quick Overview
+
+`RouterModule` Will Help you to organize your Routes and it Will give you the ability to create a routes tree.
+
+### How ?
+
+Every Module could have a path property that path will be a prefix for all Controllers in this Module, then if that Module have a parent, it will be a child of it and again all Controllers in this child modules will be prefixed by `parent module prefix` + `this module prefix`
+
+## Install
+
+Waiting for My PR in Nestjs to be upproved, after that I will publish it in npm
+
+## Setup
+
+See How it easy to setup.
+
+```ts
+...//imports
+const routes: Routes = [
+  {
+    path: '/ninja',
+    module: NinjaModule,
+    children: {
+      path: '/cats',
+      module: CatsModule,
+    },
+  },
+  {
+    path: '/ninja',
+    module: NinjaModule,
+    children: {
+      path: '/dogs',
+      module: DogsModule,
+    },
+  },
+];
+
+@Module({
+  imports: [
+      CatsModule,
+      DogsModule,
+      NinjaModule
+      ], // as usual, nothing new
+})
+export class ApplicationModule {
+  constructor() {
+    RouterModule.forRoutes(routes); // setup routes
+  }
+}
+```
+
+> :+1: TIP: Keep all of your Routes in a sprate file like `routes.ts`
+
+in this example the all the controllers in `NinjaModule` will be prefixed by `/ninja` then
+it have a 2 childs `CatsModule` and `DogsModule`.
+
+again, all controllers `CatsModule` will be prefixed by `/cats` Right ?, NO!! :open_mouth:
+, the `CatsModule` is a child of `NinjaModule` so it will be prefixed by `/ninja/cats/` path insted.
+and so `DogsModule`.
+
+> See example folder for more information.
+
+#### Example Folder Project Structure
+
+```bash
+.
+├── app.module.ts
+├── cats
+│   ├── cats.controller.ts
+│   ├── cats.module.ts
+│   └── ketty.controller.ts
+├── dogs
+│   ├── dogs.controller.ts
+│   ├── dogs.module.ts
+│   └── puppy.controller.ts
+├── main.ts
+└── ninja
+    ├── katana.controller.ts
+    ├── ninja.controller.ts
+    └── ninja.module.ts
+```
+
+and here is a simple nice route tree of `example` folder
+
+```bash
+ninja
+    ├── /
+    ├── /katana
+    ├── cats
+    │   ├── /
+    │   └── /ketty
+    ├── dogs
+        ├── /
+        └── /puppy
+```
+
+Nice !
+
+## Todo
+
+* [x] Write Tests
+* [x] Linting
+* [ ] Make `children` as an Array insted of Object
+  ## Contributing
+
+you are welcome with this project for contributing, just make a PR
+
+## Authors
+
+* **Shady Khalifa** - _Initial work_
+
+See also the list of [contributors](https://github.com/shekohex/nest-router/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md) file for details
