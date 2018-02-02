@@ -14,6 +14,8 @@ Router Module For [Nestjs](https://github.com/nestjs/nest) Framework
 
 Every Module could have a path property that path will be a prefix for all Controllers in this Module, then if that Module have a parent, it will be a child of it and again all Controllers in this child modules will be prefixed by `parent module prefix` + `this module prefix`
 
+> see issue [#255](https://github.com/nestjs/nest/issues/255) .
+
 ## Install
 
 Waiting for My [PR](https://github.com/nestjs/nest/pull/389) in Nestjs to be upproved, after that I will publish it in npm
