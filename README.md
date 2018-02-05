@@ -33,7 +33,7 @@ yarn add nest-router
 See How it easy to setup.
 
 ```ts
-...//imports
+... //imports
 const routes: Routes = [
   {
     path: '/ninja',
@@ -61,7 +61,7 @@ const routes: Routes = [
       NinjaModule
       ], // as usual, nothing new
 })
-export class ApplicationModule { }
+export class ApplicationModule {}
 ```
 
 > :+1: TIP: Keep all of your Routes in a sprate file like `routes.ts`
