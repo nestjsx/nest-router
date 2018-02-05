@@ -2,13 +2,13 @@
   "name": "nest-router",
   "version": "1.0.0",
   "description": "Router Module For Nestjs Framework",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest --notify --config=jest.json",
     "test:watch": "jest --watch --config=jest.json",
     "test:coverage": "jest --config=jest.json --coverage --coverageDirectory=coverage",
     "build": "gulp build && gulp move",
-    "build:lib": "gulp build --dest lib"
+    "build:lib": "gulp build --dist lib"
   },
   "repository": {
     "type": "git",
