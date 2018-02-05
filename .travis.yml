@@ -9,3 +9,6 @@ install:
      - gulp build
 script:
       - npm test
+after_success:
+      - npm run test:coverage
+      - "npm install coveralls && cat ./coverage/lcov.info | coveralls"

@@ -1,6 +1,6 @@
 {
   "name": "nest-router",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Router Module For Nestjs Framework",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "test:watch": "jest --watch --config=jest.json",
     "test:coverage": "jest --config=jest.json --coverage --coverageDirectory=coverage",
     "build": "gulp build && gulp move",
-    "build:lib": "gulp build --dist lib && cp -rf package.json lib",
+    "build:lib": "gulp build --dist lib && cp -rf package.json lib && cp -rf README.md lib",
     "npm:publish": "cd lib && npm publish"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "@nestjs/core": "^4.5.10",
     "@types/jest": "^22.1.1",
     "@types/node": "^9.4.0",
+    "coveralls": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-sequence": "^1.0.0",
     "gulp-typescript": "^3.1.6",
