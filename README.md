@@ -18,7 +18,17 @@ Every Module could have a path property that path will be a prefix for all Contr
 
 ## Install
 
-Waiting for My [PR](https://github.com/nestjs/nest/pull/389) in Nestjs to be upproved, after that I will publish it in npm
+IMPORTANT: you will need Nest > v4.5.10+
+
+```bash
+npm install nest-router --save
+```
+
+OR
+
+```bash
+yarn add nest-router
+```
 
 ## Setup
 

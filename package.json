@@ -1,24 +1,21 @@
 {
   "name": "nest-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Router Module For Nestjs Framework",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --notify --config=jest.json",
     "test:watch": "jest --watch --config=jest.json",
     "test:coverage": "jest --config=jest.json --coverage --coverageDirectory=coverage",
     "build": "gulp build && gulp move",
-    "build:lib": "gulp build --dist lib"
+    "build:lib": "gulp build --dist lib && cp -rf package.json lib",
+    "npm:publish": "cd lib && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shekohex/nest-router.git"
   },
-  "keywords": [
-    "nestjs",
-    "router",
-    "addons"
-  ],
+  "keywords": ["nestjs", "router", "addons"],
   "author": "Shady Khalifa <shekohex@gmail.com>",
   "license": "MIT",
   "devDependencies": {
