@@ -14,7 +14,11 @@
     "type": "git",
     "url": "git+https://github.com/shekohex/nest-router.git"
   },
-  "keywords": ["nestjs", "router", "addons"],
+  "keywords": [
+    "nestjs",
+    "router",
+    "addons"
+  ],
   "author": "Shady Khalifa <shekohex@gmail.com>",
   "license": "MIT",
   "devDependencies": {
