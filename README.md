@@ -116,7 +116,8 @@ Nice !
 * [x] Write Tests
 * [x] Linting
 * [ ] Make `children` as an Array insted of Object
-  ## Contributing
+
+## Contributing
 
 you are welcome with this project for contributing, just make a PR
 
