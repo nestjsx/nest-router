@@ -1849,6 +1849,12 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+nest-router@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/nest-router/-/nest-router-1.0.1.tgz#06ad35943533564eab4cccbc6b5fbfe9682815e9"
+  dependencies:
+    lodash "^4.17.4"
+
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
