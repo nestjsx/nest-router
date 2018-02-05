@@ -1,31 +1,10 @@
 import { Module } from '@nestjs/common';
-import { RouterModule, Routes } from 'nest-router';
+import { RouterModule } from 'nest-router';
 import { CatsModule } from './cats/cats.module';
 import { DogsModule } from './dogs/dogs.module';
 import { NinjaModule } from './ninja/ninja.module';
-const routes: Routes = [
-  {
-    path: '/ninja',
-    module: NinjaModule,
-    children: {
-      path: '/cats',
-      module: CatsModule,
-    },
-  },
-  {
-    path: '/ninja',
-    module: NinjaModule,
-    children: {
-      path: '/dogs',
-      module: DogsModule,
-    },
-  },
-];
+import { routes } from './routes';
 @Module({
-  imports: [CatsModule, DogsModule, NinjaModule],
+  imports: [RouterModule.forRoutes(routes), CatsModule, DogsModule, NinjaModule],
 })
-export class ApplicationModule {
-  constructor() {
-    RouterModule.forRoutes(routes);
-  }
-}
+export class ApplicationModule {}
