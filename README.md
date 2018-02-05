@@ -47,16 +47,13 @@ const routes: Routes = [
 
 @Module({
   imports: [
+      RouterModule.forRoutes(routes), // setup the routes
       CatsModule,
       DogsModule,
       NinjaModule
       ], // as usual, nothing new
 })
-export class ApplicationModule {
-  constructor() {
-    RouterModule.forRoutes(routes); // setup routes
-  }
-}
+export class ApplicationModule { }
 ```
 
 > :+1: TIP: Keep all of your Routes in a sprate file like `routes.ts`
