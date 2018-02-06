@@ -33,25 +33,23 @@ yarn add nest-router
 See How it easy to setup.
 
 ```ts
-...//imports
+... //imports
 const routes: Routes = [
-  {
-    path: '/ninja',
-    module: NinjaModule,
-    children: {
-      path: '/cats',
-      module: CatsModule,
+    {
+      path: '/ninja',
+      module: NinjaModule,
+      childrens: [
+        {
+          path: '/cats',
+          module: CatsModule,
+        },
+        {
+          path: '/dogs',
+          module: DogsModule,
+        },
+      ],
     },
-  },
-  {
-    path: '/ninja',
-    module: NinjaModule,
-    children: {
-      path: '/dogs',
-      module: DogsModule,
-    },
-  },
-];
+  ];
 
 @Module({
   imports: [
@@ -61,7 +59,7 @@ const routes: Routes = [
       NinjaModule
       ], // as usual, nothing new
 })
-export class ApplicationModule { }
+export class ApplicationModule {}
 ```
 
 > :+1: TIP: Keep all of your Routes in a sprate file like `routes.ts`
@@ -113,10 +111,14 @@ Nice !
 
 ## Todo
 
-* [x] Write Tests
-* [x] Linting
-* [ ] Make `children` as an Array insted of Object
-  ## Contributing
+* [x] ~~Write Tests~~
+* [x] ~~Linting~~
+* [x] ~~Make `children` as an Array insted of Object~~
+* [x] Flat All Routes using an endless nested array
+* [x] Allow children being an array with just modules
+* [x] Make possible to always omit module property
+
+## Contributing
 
 you are welcome with this project for contributing, just make a PR
 

@@ -35,23 +35,21 @@ See How it easy to setup.
 ```ts
 ... //imports
 const routes: Routes = [
-  {
-    path: '/ninja',
-    module: NinjaModule,
-    children: {
-      path: '/cats',
-      module: CatsModule,
+    {
+      path: '/ninja',
+      module: NinjaModule,
+      childrens: [
+        {
+          path: '/cats',
+          module: CatsModule,
+        },
+        {
+          path: '/dogs',
+          module: DogsModule,
+        },
+      ],
     },
-  },
-  {
-    path: '/ninja',
-    module: NinjaModule,
-    children: {
-      path: '/dogs',
-      module: DogsModule,
-    },
-  },
-];
+  ];
 
 @Module({
   imports: [
@@ -113,9 +111,12 @@ Nice !
 
 ## Todo
 
-* [x] Write Tests
-* [x] Linting
-* [ ] Make `children` as an Array insted of Object
+* [x] ~~Write Tests~~
+* [x] ~~Linting~~
+* [x] ~~Make `children` as an Array insted of Object~~
+* [x] Flat All Routes using an endless nested array
+* [x] Allow children being an array with just modules
+* [x] Make possible to always omit module property
 
 ## Contributing
 
