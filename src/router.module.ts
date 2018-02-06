@@ -1,5 +1,6 @@
 import { Module, DynamicModule } from '@nestjs/common';
 import { validatePath } from './utils/validate-path.util';
+import { flatRoutes } from './utils/flat-routes.util';
 import { Routes } from './routes.interface';
 const MODULE_PATH = '__module_path__';
 /**
@@ -19,14 +20,9 @@ export class RouterModule {
     };
   }
   private static buildPathMap(routes: Routes) {
-    routes.forEach(route => {
-      route.children.path = validatePath(
-        validatePath(route.path) + validatePath(route.children.path),
-      );
-    });
-    routes.forEach(route => {
+    const flattenRoutes = flatRoutes(routes);
+    flattenRoutes.forEach(route => {
       Reflect.defineMetadata(MODULE_PATH, validatePath(route.path), route.module);
-      Reflect.defineMetadata(MODULE_PATH, validatePath(route.children.path), route.children.module);
     });
   }
 }
