@@ -18,7 +18,7 @@ describe('RouterModule', () => {
     {
       path: 'parent',
       module: ParentModule,
-      childrens: [
+      children: [
         {
           path: 'child',
           module: ChildModule,
@@ -26,7 +26,7 @@ describe('RouterModule', () => {
       ],
     },
   ];
-  const routes2: Routes = [{ path: 'v1', childrens: [AuthModule, PaymentsModule] }];
+  const routes2: Routes = [{ path: 'v1', children: [AuthModule, PaymentsModule] }];
 
   @Module({ imports: [ParentModule, ChildModule, RouterModule.forRoutes(routes1)] })
   class MainModule {}

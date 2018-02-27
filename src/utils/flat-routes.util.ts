@@ -8,8 +8,16 @@ export function flatRoutes(routes: Routes) {
     if (element.module && element.path) {
       result.push(element);
     }
-    if (element.childrens) {
-      element.childrens.forEach(child => {
+    // this block will be removed soon
+    if (!element.children && element.childrens) {
+      element.children = element.childrens;
+      console.log(
+        `\x1b[33m%s\x1b[0m`,
+        `WARNING: 'childrens' is deprecated, use 'children' instead.`,
+      );
+    }
+    if (element.children) {
+      element.children.forEach(child => {
         if (!isString(child) && child.path) {
           child.path = validatePath(validatePath(element.path) + validatePath(child.path));
         } else {
@@ -17,11 +25,11 @@ export function flatRoutes(routes: Routes) {
           result.push(child);
         }
       });
-      return flatRoutes(element.childrens);
+      return flatRoutes(element.children);
     }
   });
   result.forEach(route => {
-    delete route.childrens;
+    delete route.children;
   });
   return result;
 }

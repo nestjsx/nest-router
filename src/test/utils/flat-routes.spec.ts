@@ -6,20 +6,20 @@ describe('FlatRoutes', () => {
       {
         path: '/parent',
         module: 'ParentModule',
-        childrens: [
+        children: [
           {
             path: '/child',
             module: 'ChildModule',
-            childrens: [
+            children: [
               { path: '/child2', module: 'ChildModule2' },
               {
                 path: '/parentchild',
                 module: 'ParentChildModule',
-                childrens: [
+                children: [
                   {
                     path: '/childchild',
                     module: 'ChildChildModule',
-                    childrens: [{ path: '/child2child', module: 'ChildChildModule2' }],
+                    children: [{ path: '/child2child', module: 'ChildChildModule2' }],
                   },
                 ],
               },
@@ -27,8 +27,8 @@ describe('FlatRoutes', () => {
           },
         ],
       },
-      { path: '/v1', childrens: ['AuthModule', 'CatsModule', 'DogsModule'] },
-      { path: '/v2', childrens: ['AuthModule2', 'CatsModule2'] },
+      { path: '/v1', children: ['AuthModule', 'CatsModule', 'DogsModule'] },
+      { path: '/v2', children: ['AuthModule2', 'CatsModule2'] },
     ];
     const expectedRoutes = [
       { path: '/parent', module: 'ParentModule' },
