@@ -29,6 +29,7 @@ describe('FlatRoutes', () => {
       },
       { path: '/v1', children: ['AuthModule', 'CatsModule', 'DogsModule'] },
       { path: '/v2', children: ['AuthModule2', 'CatsModule2'] },
+      { path: '/v3', childrens: ['AuthModule3', 'CatsModule3'] },
     ];
     const expectedRoutes = [
       { path: '/parent', module: 'ParentModule' },
@@ -42,6 +43,8 @@ describe('FlatRoutes', () => {
       { path: '/v1', module: 'DogsModule' },
       { path: '/v2', module: 'AuthModule2' },
       { path: '/v2', module: 'CatsModule2' },
+      { path: '/v3', module: 'AuthModule3' },
+      { path: '/v3', module: 'CatsModule3' },
     ];
     expect(f(routes)).toEqual(expectedRoutes);
   });
