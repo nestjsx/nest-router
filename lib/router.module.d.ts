@@ -7,7 +7,7 @@ import { Routes } from './routes.interface';
 export declare class RouterModule {
     /**
      * takes an array of modules and organize them in hierarchy way
-     * @param routes {Routes} Array of Routes
+     * @param {Routes} routes Array of Routes
      */
     static forRoutes(routes: Routes): DynamicModule;
     private static buildPathMap(routes);
