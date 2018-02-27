@@ -11,7 +11,7 @@ const MODULE_PATH = '__module_path__';
 export class RouterModule {
   /**
    * takes an array of modules and organize them in hierarchy way
-   * @param routes {Routes} Array of Routes
+   * @param {Routes} routes Array of Routes
    */
   public static forRoutes(routes: Routes): DynamicModule {
     RouterModule.buildPathMap(routes);
