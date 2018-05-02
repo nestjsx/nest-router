@@ -22,7 +22,7 @@
     "@nestjs/common": "^4.6.4",
     "@nestjs/core": "^4.6.4",
     "@types/jest": "^22.1.1",
-    "@types/node": "^9.4.0",
+    "@types/node": "^10.0.3",
     "coveralls": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-sequence": "^1.0.0",
