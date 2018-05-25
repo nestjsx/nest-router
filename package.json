@@ -20,7 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "@nestjs/common": "^4.6.4",
-    "@nestjs/core": "^4.6.4",
+    "@nestjs/core": "^5.0.1",
     "@types/jest": "^22.1.1",
     "@types/node": "^10.0.3",
     "coveralls": "^3.0.0",
