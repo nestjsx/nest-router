@@ -19,7 +19,7 @@
   "author": "Shady Khalifa <shekohex@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@nestjs/common": "^4.6.4",
+    "@nestjs/common": "^5.0.1",
     "@nestjs/core": "^5.0.1",
     "@types/jest": "^22.1.1",
     "@types/node": "^10.0.3",
