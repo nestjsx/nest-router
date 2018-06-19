@@ -15,5 +15,7 @@ gulp.task('build', () => {
 });
 
 gulp.task('move', function() {
-  gulp.src(['node_modules/nest-router/**/*']).pipe(gulp.dest('example/node_modules/nest-router'));
+  gulp.src(['node_modules/nest-router/**/*'])
+  .pipe(gulp.dest('examples/nest-v4x/node_modules/nest-router'))
+  .pipe(gulp.dest('examples/nest-v5x/node_modules/nest-router'));
 });
