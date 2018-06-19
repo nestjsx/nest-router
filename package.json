@@ -1,6 +1,6 @@
 {
   "name": "nest-router",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Router Module For Nestjs Framework",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,11 @@
     "type": "git",
     "url": "git+https://github.com/shekohex/nest-router.git"
   },
-  "keywords": ["nestjs", "router", "addons"],
+  "keywords": [
+    "nestjs",
+    "router",
+    "addons"
+  ],
   "author": "Shady Khalifa <shekohex@gmail.com>",
   "license": "MIT",
   "devDependencies": {
