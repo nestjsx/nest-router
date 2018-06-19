@@ -71,7 +71,7 @@ again, all controllers `CatsModule` will be prefixed by `/cats` Right ?, NO!! :o
 , the `CatsModule` is a child of `NinjaModule` so it will be prefixed by `/ninja/cats/` path insted.
 and so `DogsModule`.
 
-> See example folder for more information.
+> See examples folder for more information.
 
 #### Example Folder Project Structure
 

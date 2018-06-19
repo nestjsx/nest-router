@@ -1,6 +1,6 @@
 {
   "name": "nest-router",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Router Module For Nestjs Framework",
   "main": "index.js",
   "scripts": {
@@ -15,23 +15,27 @@
     "type": "git",
     "url": "git+https://github.com/shekohex/nest-router.git"
   },
-  "keywords": ["nestjs", "router", "addons"],
+  "keywords": [
+    "nestjs",
+    "router",
+    "addons"
+  ],
   "author": "Shady Khalifa <shekohex@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@nestjs/common": "^4.6.4",
-    "@nestjs/core": "^4.6.4",
-    "@types/jest": "^22.1.1",
-    "@types/node": "^9.4.0",
+    "@nestjs/common": "^5.0.0",
+    "@nestjs/core": "^5.0.0",
+    "@types/jest": "^23.0.0",
+    "@types/node": "^10.0.3",
     "coveralls": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-sequence": "^1.0.0",
-    "gulp-typescript": "^3.1.6",
+    "gulp-typescript": "^4.0.0",
     "jest": "^22.1.4",
     "reflect-metadata": "^0.1.12",
-    "rxjs": "^5.5.6",
+    "rxjs": "^6.0.0",
     "ts-jest": "^22.0.2",
-    "ts-node": "^4.1.0",
+    "ts-node": "^6.0.0",
     "typescript": "^2.6.2"
   },
   "bugs": {
