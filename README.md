@@ -6,17 +6,17 @@ Router Module For [Nestjs](https://github.com/nestjs/nest) Framework
 
 ## Quick Overview
 
-`RouterModule` Will Help you to organize your Routes and it Will give you the ability to create a routes tree.
+`RouterModule` helps you organize your routes and lets you create a routes tree.
 
 ### How ?
 
-Every Module could have a path property that path will be a prefix for all Controllers in this Module, then if that Module have a parent, it will be a child of it and again all Controllers in this child modules will be prefixed by `parent module prefix` + `this module prefix`
+Every module could have a path property. That path will be a prefix for all controllers in this module. If that module has a parent, it will be a child of it and again all controllers in this child module will be prefixed by `parent module prefix` + `this module prefix`
 
 > see issue [#255](https://github.com/nestjs/nest/issues/255) .
 
 ## Install
 
-IMPORTANT: you will need Nest > v4.5.10+
+IMPORTANT: you need Nest > v4.5.10+
 
 ```bash
 npm install nest-router --save
@@ -30,7 +30,7 @@ yarn add nest-router
 
 ## Setup
 
-See How it easy to setup.
+See how easy it is to set up.
 
 ```ts
 ... //imports
@@ -62,14 +62,14 @@ const routes: Routes = [
 export class ApplicationModule {}
 ```
 
-> :+1: TIP: Keep all of your Routes in a sprate file like `routes.ts`
+> :+1: TIP: Keep all of your routes in a separate file like `routes.ts`
 
-in this example the all the controllers in `NinjaModule` will be prefixed by `/ninja` then
-it have a 2 childs `CatsModule` and `DogsModule`.
+In this example, all the controllers in `NinjaModule` will be prefixed by `/ninja` and it
+has two childs, `CatsModule` and `DogsModule`.
 
-again, all controllers `CatsModule` will be prefixed by `/cats` Right ?, NO!! :open_mouth:
-, the `CatsModule` is a child of `NinjaModule` so it will be prefixed by `/ninja/cats/` path insted.
-and so `DogsModule`.
+Will the controllers of `CatsModule` be prefixed by `/cats`? NO!! :open_mouth:
+The `CatsModule` is a child of `NinjaModule` so it will be prefixed by `/ninja/cats/` instead.
+And so will `DogsModule`.
 
 > See examples folder for more information.
 
@@ -93,7 +93,7 @@ and so `DogsModule`.
     └── ninja.module.ts
 ```
 
-and here is a simple nice route tree of `example` folder
+And here is a simple, nice route tree of `example` folder:
 
 ```bash
 ninja
@@ -107,7 +107,7 @@ ninja
         └── /puppy
 ```
 
-Nice !
+Nice!
 
 ## CHANGELOG
 
@@ -115,7 +115,7 @@ See [CHANGELOG](CHANGELOG.md) for more information.
 
 ## Contributing
 
-you are welcome with this project for contributing, just make a PR
+You are welcome to contribute to this project, just open a PR.
 
 ## Authors
 
@@ -125,4 +125,4 @@ See also the list of [contributors](https://github.com/shekohex/nest-router/cont
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
