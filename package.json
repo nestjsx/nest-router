@@ -35,7 +35,7 @@
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.0.0",
     "ts-jest": "^22.0.2",
-    "ts-node": "^6.0.0",
+    "ts-node": "^7.0.0",
     "typescript": "^2.6.2"
   },
   "bugs": {
