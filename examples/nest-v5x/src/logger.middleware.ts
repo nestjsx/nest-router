@@ -14,7 +14,7 @@ export class LoggerMiddleware implements NestMiddleware {
             req.path,
             ' }',
           );
-          let excludePath = route.path == req.path;
+          const excludePath = route.path == req.path;
           return excludePath;
         }).length > 0;
       console.log(
