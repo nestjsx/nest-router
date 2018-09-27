@@ -10,5 +10,5 @@ export declare class RouterModule {
      * @param {Routes} routes Array of Routes
      */
     static forRoutes(routes: Routes): DynamicModule;
-    private static buildPathMap(routes);
+    private static buildPathMap;
 }
