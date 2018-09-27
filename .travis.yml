@@ -1,12 +1,14 @@
 language: node_js
 node_js:
-      - "7"
+      - "8"
+      - "9"
+      - "10"
 before_script:
      - export DISPLAY=:99.0
      - sh -e /etc/init.d/xvfb start
 install:
      - npm install
-     - gulp build
+     - npm run build
 script:
       - npm test
 after_success:
