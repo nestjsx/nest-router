@@ -63,3 +63,6 @@ typings/
 
 # build and Play
 play
+
+# remove build or lib from repo
+lib

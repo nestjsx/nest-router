@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.7] - 2018-09-28
+### Changed
+* Project dependency refactor
+* add node v10 as a test target
+
 ## [1.0.6] - 2018-06-20
 ### Changed
 * Now Nest Router Module Using Nest V5+

@@ -1,14 +1,14 @@
 {
   "name": "nest-router",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Router Module For Nestjs Framework",
   "main": "index.js",
   "scripts": {
     "test": "jest --notify --config=jest.json",
     "test:watch": "jest --watch --config=jest.json",
     "test:coverage": "jest --config=jest.json --coverage --coverageDirectory=coverage",
-    "build": "gulp build && gulp move",
-    "build:lib": "gulp build --dist lib && cp -rf package.json lib && cp -rf README.md lib",
+    "build": "./scripts/build.sh",
+    "build:andMove": "./scripts/build.sh andMove",
     "npm:publish": "cd lib && npm publish"
   },
   "repository": {
@@ -27,22 +27,15 @@
     "@nestjs/core": "^5.0.0",
     "@types/jest": "^23.0.0",
     "@types/node": "^10.0.3",
-    "coveralls": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-sequence": "^1.0.0",
-    "gulp-typescript": "^4.0.0",
-    "jest": "^22.1.4",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
     "reflect-metadata": "^0.1.12",
-    "rxjs": "^6.0.0",
-    "ts-jest": "^23.0.0",
-    "ts-node": "^7.0.0",
-    "typescript": "^2.6.2"
+    "rxjs": "^6.3.0",
+    "ts-jest": "^23.10.2",
+    "typescript": "^3.0.0"
   },
   "bugs": {
     "url": "https://github.com/shekohex/nest-router/issues"
   },
-  "homepage": "https://github.com/shekohex/nest-router#readme",
-  "dependencies": {
-    "lodash": "^4.17.4"
-  }
+  "homepage": "https://github.com/shekohex/nest-router#readme"
 }
