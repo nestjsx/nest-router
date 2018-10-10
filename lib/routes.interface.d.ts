@@ -3,12 +3,14 @@
  * - `path` - a string describe the Module path which will be applied
  * to all it's controllers and childs
  * - `module` - the parent Module.
+ * - `controller` - the parent Controller.
  * - `children` - an array of child Modules.
  * - `childrens` @deprecated - @see children
  */
 export interface Route {
     path: string;
     module?: any;
+    controller?: any;
     childrens?: any[];
     children?: any[];
 }
