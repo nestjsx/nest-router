@@ -6,9 +6,6 @@ export const routes: Routes = [
   {
     path: '/ninja',
     module: NinjaModule,
-    children: [
-      { path: '/cats', module: CatsModule },
-      { path: '/dogs', module: DogsModule },
-    ],
+    children: [{ path: '/cats', module: CatsModule }, { path: '/dogs', module: DogsModule }],
   },
 ];
