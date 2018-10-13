@@ -5,7 +5,7 @@ import { validatePath } from './validate-path.util';
 const result = [];
 export function flatRoutes(routes: Routes) {
   routes.forEach(element => {
-    if (element.module && element.path) {
+    if ((element.module || element.controller) && element.path) {
       result.push(element);
     }
     // this block will be removed soon
