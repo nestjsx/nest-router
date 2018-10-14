@@ -1,8 +1,9 @@
 import { Module, DynamicModule } from '@nestjs/common';
+import { MODULE_PATH } from '@nestjs/common/constants';
 import { validatePath } from './utils/validate-path.util';
 import { flatRoutes } from './utils/flat-routes.util';
 import { Routes } from './routes.interface';
-const MODULE_PATH = '__module_path__';
+
 /**
  * A utility Module to Organize your Routes,
  * it could be imported in the Root Module of you application.
