@@ -1,12 +1,23 @@
 import { RouterModule } from '../router.module';
-import { Route, Routes } from '../routes.interface';
-import { Module } from '@nestjs/common';
-describe('RouterModule', () => {
-  const MODULE_PATH = '__module_path__';
+import { Routes } from '../routes.interface';
+import { Module, Controller } from '@nestjs/common';
+import { MODULE_PATH } from '@nestjs/common/constants';
+import { Test } from '@nestjs/testing';
+import { INestApplication } from '@nestjs/common';
 
-  @Module({})
+describe('RouterModule', () => {
+  let app: INestApplication;
+
+  @Controller('/parent-controller')
+  class ParentController {}
+  @Controller('/child-controller')
+  class ChildController {}
+
+  class UnknownController {}
+  @Module({ controllers: [ParentController] })
   class ParentModule {}
-  @Module({})
+
+  @Module({ controllers: [ChildController] })
   class ChildModule {}
 
   @Module({})
@@ -46,5 +57,30 @@ describe('RouterModule', () => {
     const paymentPath = Reflect.getMetadata(MODULE_PATH, PaymentsModule);
     expect(authPath).toEqual('/v1');
     expect(paymentPath).toEqual('/v1');
+  });
+
+  describe('Full Running App', async () => {
+    beforeAll(async () => {
+      const module = await Test.createTestingModule({
+        imports: [MainModule, AppModule],
+      }).compile();
+      app = module.createNestApplication();
+      await app.init();
+    });
+
+    it('should Resolve Controllers path with its Module Path if any', async () => {
+      expect(RouterModule.resolvePath(ParentController)).toEqual('/parent/parent-controller');
+      expect(RouterModule.resolvePath(ChildController)).toEqual('/parent/child/child-controller');
+    });
+
+    it('should throw error when we cannot find the controller', async () => {
+      expect(() => RouterModule.resolvePath(UnknownController)).toThrowError(
+        'Nest cannot find given element (it does not exist in current context)',
+      );
+    });
+
+    afterAll(async () => {
+      await app.close();
+    });
   });
 });
