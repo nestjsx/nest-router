@@ -1,3 +1,5 @@
+import { Type } from '@nestjs/common';
+
 /**
  * Defines the Routes Tree
  * - `path` - a string describe the Module path which will be applied
@@ -8,9 +10,9 @@
  */
 export interface Route {
   path: string;
-  module?: any;
-  childrens?: any[];
-  children?: any[];
+  module?: Type<any> | string;
+  childrens?: Routes | Type<any>[] | string[];
+  children?: Routes | Type<any>[] | string[];
 }
 
 /**
