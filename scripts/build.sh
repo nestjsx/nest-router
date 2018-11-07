@@ -14,7 +14,7 @@ onExit() {
 build() {
     echo 'Start building..'
     # Run tsc
-    tsc
+    tsc -p tsconfig.prod.json
     echo 'tsc exist with status code:' $?
     echo 'Copying Other files..'
     cp -rf package.json lib
