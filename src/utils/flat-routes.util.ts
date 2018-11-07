@@ -17,15 +17,15 @@ export function flatRoutes(routes: Routes) {
       );
     }
     if (element.children) {
-      element.children.forEach(child => {
+      const childrenRef = element.children as Routes;
+      childrenRef.forEach(child => {
         if (!isString(child) && child.path) {
           child.path = validatePath(validatePath(element.path) + validatePath(child.path));
         } else {
-          child = { path: element.path, module: child };
-          result.push(child);
+          result.push({ path: element.path, module: child });
         }
       });
-      return flatRoutes(element.children);
+      return flatRoutes(childrenRef);
     }
   });
   result.forEach(route => {
