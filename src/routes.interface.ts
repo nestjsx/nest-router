@@ -10,7 +10,7 @@ export interface Route {
   path: string;
   module?: any;
   childrens?: any[];
-  children?: any[];
+  children?: Route[];
 }
 
 /**
