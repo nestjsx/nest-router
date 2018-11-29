@@ -109,6 +109,20 @@ ninja
 
 Nice!
 
+#### Resolve Full Controller Path:
+Nestjs dosen't resolve or take into account `MODULE_PATH` metadata when it is coming to resolve Controller path in Middlewear resolver for example, so that i introduced a new fancy method `RouterModule#resolvePath` that will resolve the full path of any controller so instead of doing so:
+
+```ts
+consumer.apply(someMiddleware).forRoutes(SomeController);
+``` 
+you should do
+
+```ts
+consumer.apply(someMiddleware).forRoutes(RouterModule.resolvePath(SomeController));
+``` 
+
+see [#32](https://github.com/shekohex/nest-router/pull/32) for more information about this.
+
 ## CHANGELOG
 
 See [CHANGELOG](CHANGELOG.md) for more information.
