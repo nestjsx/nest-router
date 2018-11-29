@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.8]
+### Added
+* Resolve Full Controller Path from anywhere ([#32](https://github.com/shekohex/nest-router/pull/32))
+
+## Changed
+* Update Dev Dependencies
+
 ## [1.0.7] - 2018-09-28
 ### Changed
 * Project dependency refactor
