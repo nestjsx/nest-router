@@ -4,7 +4,6 @@ import { Module, Controller } from '@nestjs/common';
 import { MODULE_PATH } from '@nestjs/common/constants';
 import { Test } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
-import { async } from 'rxjs/internal/scheduler/async';
 
 describe('RouterModule', () => {
   let app: INestApplication;
