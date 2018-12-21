@@ -1,6 +1,6 @@
 {
   "name": "nest-router",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Router Module For Nestjs Framework",
   "main": "index.js",
   "scripts": {
