@@ -4,6 +4,7 @@ import { Module, Controller } from '@nestjs/common';
 import { MODULE_PATH } from '@nestjs/common/constants';
 import { Test } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
+import { async } from 'rxjs/internal/scheduler/async';
 
 describe('RouterModule', () => {
   let app: INestApplication;
@@ -12,6 +13,8 @@ describe('RouterModule', () => {
   class ParentController {}
   @Controller('/child-controller')
   class ChildController {}
+  @Controller('no-slash-controller')
+  class NoSlashController {}
 
   class UnknownController {}
   @Module({ controllers: [ParentController] })
@@ -25,6 +28,9 @@ describe('RouterModule', () => {
   @Module({})
   class PaymentsModule {}
 
+  @Module({ controllers: [NoSlashController] })
+  class NoSlashModule {}
+
   const routes1: Routes = [
     {
       path: 'parent',
@@ -37,12 +43,12 @@ describe('RouterModule', () => {
       ],
     },
   ];
-  const routes2: Routes = [{ path: 'v1', children: [AuthModule, PaymentsModule] }];
+  const routes2: Routes = [{ path: 'v1', children: [AuthModule, PaymentsModule, NoSlashModule] }];
 
   @Module({ imports: [ParentModule, ChildModule, RouterModule.forRoutes(routes1)] })
   class MainModule {}
 
-  @Module({ imports: [AuthModule, PaymentsModule, RouterModule.forRoutes(routes2)] })
+  @Module({ imports: [AuthModule, PaymentsModule, NoSlashModule, RouterModule.forRoutes(routes2)] })
   class AppModule {}
 
   test('it should add Path Metadata to all Routes', () => {
@@ -77,6 +83,10 @@ describe('RouterModule', () => {
       expect(() => RouterModule.resolvePath(UnknownController)).toThrowError(
         'Nest cannot find given element (it does not exist in current context)',
       );
+    });
+
+    it('should resolve controllers path concatinated with its module path correctly', async () => {
+      expect(RouterModule.resolvePath(NoSlashController)).toEqual('/v1/no-slash-controller');
     });
 
     afterAll(async () => {

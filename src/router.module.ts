@@ -43,7 +43,7 @@ export class RouterModule {
     const controllerPath: string = Reflect.getMetadata(PATH_METADATA, controller);
     const modulePath = RouterModule.routesContainer.get(controller.name);
     if (modulePath && controllerPath) {
-      return validatePath(modulePath + controllerPath);
+      return validatePath(modulePath + validatePath(controllerPath));
     } else {
       throw new UnknownElementException();
     }
