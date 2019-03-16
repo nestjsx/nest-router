@@ -24,7 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@nestjs/common": "^5.0.0",
-    "@nestjs/core": "^5.0.0",
+    "@nestjs/core": "^6.0.0",
     "@nestjs/testing": "^5.3.11",
     "@types/jest": "^24.0.0",
     "@types/node": "^11.9.0",
