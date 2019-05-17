@@ -142,5 +142,4 @@ See also the list of [contributors](https://github.com/shekohex/nest-router/cont
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fshekohex%2Fnest-router.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fshekohex%2Fnest-router?ref=badge_large)
