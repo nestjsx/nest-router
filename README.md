@@ -1,6 +1,7 @@
 # Nest Router :vertical_traffic_light:
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/shekohex/nest-router.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/shekohex/nest-router.svg?branch=master)](https://travis-ci.org/shekohex/nest-router) [![npm version](https://badge.fury.io/js/nest-router.svg)](Https://www.npmjs.com/package/nest-router) [![Coverage Status](https://coveralls.io/repos/github/shekohex/nest-router/badge.svg?branch=master)](https://coveralls.io/github/shekohex/nest-router?branch=master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fshekohex%2Fnest-router.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fshekohex%2Fnest-router?ref=badge_shield)
 
 Router Module For [Nestjs](https://github.com/nestjs/nest) Framework
 
@@ -140,3 +141,6 @@ See also the list of [contributors](https://github.com/shekohex/nest-router/cont
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fshekohex%2Fnest-router.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fshekohex%2Fnest-router?ref=badge_large)
