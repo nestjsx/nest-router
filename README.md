@@ -110,6 +110,33 @@ ninja
 
 Nice!
 
+#### Params in nested routes
+
+In a standard REST API, you probably would need to add some params to your nested routes. Here is an example of how you can achieve it:
+
+```ts
+... //imports
+const routes: Routes = [
+    {
+      path: '/ninja',
+      module: NinjaModule,
+      children: [
+        {
+          path: '/:ninjaId/cats',
+          module: CatsModule,
+        },
+        {
+          path: '/:ninjaId/dogs',
+          module: DogsModule,
+        },
+      ],
+    },
+  ];
+```
+
+The `ninjaId` param will be available inside `CatsModule` controllers and `DogsModule` controllers. Please, find the [instruction how to handle params in the official documentation](https://docs.nestjs.com/controllers#route-parameters). It might be a good practice to use a [pipe for transformation use case](https://docs.nestjs.com/pipes#transformation-use-case) to have an access to `ninja` object instead of just id.
+
+
 #### Resolve Full Controller Path:
 Nestjs dosen't resolve or take into account `MODULE_PATH` metadata when it is coming to resolve Controller path in Middlewear resolver for example, so that i introduced a new fancy method `RouterModule#resolvePath` that will resolve the full path of any controller so instead of doing so:
 
