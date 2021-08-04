@@ -5,6 +5,12 @@
 
 Router Module For [Nestjs](https://github.com/nestjs/nest) Framework
 
+## Important Note
+
+As of Nestjs `v8.0.0` This module got added into the `@nestjs/core`.
+see the [docs](https://docs.nestjs.com/recipes/router-module)
+with that being said, this package is still maintained (for now).
+
 ## Quick Overview
 
 `RouterModule` helps you organize your routes and lets you create a routes tree.
