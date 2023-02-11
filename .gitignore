@@ -27,7 +27,6 @@ coverage
 bower_components
 
 #ide
-.vscode
 .idea
 
 # node-waf configuration
@@ -67,3 +66,7 @@ play
 # remove build or lib from repo
 lib
 dist
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
