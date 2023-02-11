@@ -17,7 +17,7 @@
     "webpack": "webpack --config webpack.config.js"
   },
   "dependencies": {
-    "@nestjs/common": "^5.5.0",
+    "@nestjs/common": "^9.3.8",
     "@nestjs/core": "^5.5.0",
     "@nestjs/microservices": "^5.5.0",
     "@nestjs/testing": "^5.5.0",
