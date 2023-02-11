@@ -18,7 +18,7 @@
     "@nestjs/core": "^4.6.4",
     "@nestjs/testing": "^4.6.1",
     "class-transformer": "^0.1.7",
-    "class-validator": "^0.7.2",
+    "class-validator": "^0.14.0",
     "nest-router": "^1.0.5",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.3",
